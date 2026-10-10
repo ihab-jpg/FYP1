@@ -22,3 +22,49 @@ Points to work for:
 | Quanterion Output              |   | Yes                                                                                                                  |
 | Sensor Material                |   | Ag/AgCl + Felt + Saline                                                                                              |
 
+The Epoc covers the AF3, F7, F3, FC5, T7, P7, O1, O2, P8, T8, FC6, F4, F8, AF4  channels, described below: 
+
+| Channels | Nearby region | Functions associated with that region |
+|----------|---------------|---------------------------------------|
+| **AF3, AF4** | Prefrontal| Attention, working memory, planning and decision-making |
+| **F3, F4**   | Frontal   | Working memory, executive control and aspects of movement planning |
+| **F7, F8**   | Lateral frontal | Language-related processing, response inhibition and cognitive control |
+| **FC5, FC6** | Lateral frontocentral | Movement preparation and planning; aspects of speech and sensorimotor processing |
+| **T7, T8**   | Temporal | Auditory processing, aspects of language and memory |
+| **P7, P8**   | Posterior parietal / temporoparietal | Sensory integration, spatial attention and aspects of body representation |
+| **O1, O2**   | Occipital | Visual processing |
+
+
+Missing are the C3, Cz, and C4 channels, which cover sensorimotor region, where the movement desicions are made, called Motor Imagery (MI).
+these channels are missing from the Epoc X, which is a main limitation as mentioned by  (Tarara et al., 2025)     
+
+A primary limitation contributing to this lack of differentiation is the 
+absence of central electrodes in the Emotiv EPOC X, 
+which impedes the precise capture of signal changes associated with MI. 
+This limitation highlights the importance of utilizing equipment that can 
+provide more comprehensive coverage of the motor cortex.
+
+Despite these findings, the approach of combining these specific movements has not been 
+previously explored, suggesting a potential avenue for future research. It is recommended to investigate whether alternative EEG headsets 
+equipped with central electrodes can provide better performance for this type of BCI application, thus facilitating a more nuanced analysis of
+MI and expanding the capabilities of BCIs in practical settings.
+
+
+
+
+The concept behind decoding EEG signals is the focus on the power of the mu and beta signals , which have the frequency ranges of 8-12 Hz and 12-20 Hz respectivly. when looking into the power drops of these 
+signals over repetative "motion" doing in our case, we can use a model to train it into memorizing this signal and what it means.
+In our case we may shift to collect data using the Language or wording imagination, which would be classified for the model as Move your arm up and down, where the data collection and model pipeline are the same for all types of functions. 
+
+
+LAU Rizk Hospital has the following device which has the channels we want Nihon Kohden EEG-1100A, also the frequency range matched our needs. 
+
+
+Also an alternative way of working is to use a pre existant dataset to train a model, and then make our own dataset to test and fine tune the model, this was we start testing directly, and no need for collecting data to train a model
+but to do this we have to follow the following procedures:
+
+| **1. Develop using FEIS dataset** | Select two imagined speech sounds and build your preprocessing, feature extraction and classifier. Use only the imagined-speech portions. |
+| **2. Collect EPOC X calibration data** | Have your participants imagine **the same two sounds**, with matching instructions and timing. |
+| **3. Adapt the model** | Use part of your recordings to retrain or fine-tune it. Use separate validation recordings to select settings. |
+| **4. Test independently** | Evaluate the final model on untouched recordings, preferably from another session. |
+| **5. Demonstrate live control** | Process incoming EEG through the same pipeline and translate accepted predictions into device commands. |
