@@ -1,0 +1,24 @@
+Points to work for: 
+# Technical specifications
+
+| Number of Channels             |   | 14 (plus CMS/DRL references at P3/P4 locations M1/M2)                                                                |
+| ------------------------------ | - | -------------------------------------------------------------------------------------------------------------------- |
+| 10-20 positions                |   | AF3, F7, F3, FC5, T7, P7, O1, O2, P8, T8, FC6, F4, F8, AF4                                                           |
+| Sampling Method                |   | Sequential sampling. Single ADC                                                                                      |
+| Sampling Rate                  |   | 128 SPS / 256 SPS (2048 Hz internal)                                                                                 |
+| EEG Resolution                 |   | 14 bits 1 LSB = 0.51μV (16 bit ADC, 2 bits instrumental noise floor is discarded), settings can be changed to 16-bit |
+| Bandwidth                      |   | 0.2 - 45Hz, digital notch filters at 50Hz and 60Hz                                                                   |
+| Filtering                      |   | Built-in digital 5th order Sinc filter                                                                               |
+| Dynamic Range (input referred) |   | 8400 uV(pp)                                                                                                          |
+| Coupling Mode                  |   | AC coupled                                                                                                           |
+| Connectivity                   |   | Proprietary 2.4GHz wireless, BLE and USB (Extender only)                                                             |
+| Battery Life                   |   | Up to 9 hours (LiPo)                                                                                                 |
+| Impedance Measurement          |   | Real-time contact quality using patented system                                                                      |
+| Motion Sensor                  |   | ICM-20948                                                                                                            |
+| Accelerometer                  |   | 3-axis +/-4g                                                                                                         |
+| Magnetometer                   |   | 3-axis +/- 4900 uTesla                                                                                               |
+| Motion Sampling                |   | 32 / 64 Hz                                                                                                           |
+| Motion Resolution              |   | 14 / 16-bit (User Defined)                                                                                           |
+| Quanterion Output              |   | Yes                                                                                                                  |
+| Sensor Material                |   | Ag/AgCl + Felt + Saline                                                                                              |
+
