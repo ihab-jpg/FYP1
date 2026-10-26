@@ -1,0 +1,8 @@
+In this section i will describe in details how to find data and whom should we target as subjects and on what criteria will we accept a subject or refuse it. 
+
+variations in performance over sessions and subjects are too severe to overcome easily; therefore, a basic understanding
+and investigation of BCI performance variation is necessary to find critical evidence of performance variation.
+
+validated our EEG datasets by using the percentage of bad trials, event-related desynchronization/synchronization
+(ERD/ERS) analysis, and classification analysis. After conventional rejection of bad trials, we showed contralateral ERD and
+ipsilateral ERS in the somatosensory area, which are well-known patterns of MI
